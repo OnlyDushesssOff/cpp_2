@@ -11,9 +11,14 @@ int main(){
         int num;
         int denom;
         std::cin >> num >> denom;
-        Fractions fract = Fractions(num, denom);
-        fract.NOD();
-        fract.Print();
+        if(denom != 0){
+            Fractions fract = Fractions(num, denom);
+            fract.NOD();
+            fract.Print();
+        }else{
+            std::cout << "Divide by zero!";
+            return 1;
+        }
     }else if(mod == 2){
         std::cout << "Print: ";
         double number;

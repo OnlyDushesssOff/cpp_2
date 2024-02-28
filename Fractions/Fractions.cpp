@@ -1,8 +1,8 @@
 #include "Fractions.h"
+#include "cmath"
+#include <iomanip>
 
 void Fractions::SetDenom(int32_t newDenom){
-    if (newDenom == 0)
-        throw "Divide by zero!";
     _denom = newDenom;
 }
 
@@ -33,8 +33,8 @@ void Fractions::Add(){
     int flag = 1;
     int umn = 1;
     while(flag != 0){
-        int num = static_cast<int>(_fract * umn);
-        double ans = _fract * umn - num;
+        uint32_t num = static_cast<int>(fabs(_fract * umn));
+        double ans = fabs(_fract * umn) - num;
         if(ans > ez){
             umn *= 10;
         }else{
@@ -54,28 +54,34 @@ void Fractions::NOD(){
         b = r;
         r = a%b;
     }
-    _num = _num / b;
-    _denom = _denom / b;
+    _num = _num / fabs(b);
+    _denom = _denom / fabs(b);
 }
 
 void Fractions::Print(){
     int count = 0;
-    if(_num > _denom){
-        int numi = _num;
+    if(fabs(_num) > fabs(_denom)){
+        int numi = fabs(_num);
         while(numi > 0){
             numi = numi / 10;
             count +=1;
         }
     }else{
-        int numi = _denom;
+        int numi = fabs(_denom);
         while(numi > 0){
             numi = numi / 10;
             count +=1;
         }        
     }
-    std::cout <<std::endl<<"Answer:"<<std::endl<< std::endl<< _num <<std::endl;
+    if(_denom < 0){
+        _num *= -1;
+        _denom *= -1;
+    }
+    if(_num < 0){count += 1;}
+    std::cout <<std::endl<<"Answer:"<<std::endl<< std::endl<<std::setw(count)<< _num <<std::endl;
     for(int i = 0; i < count; i++){
         std::cout << "-";
     } 
-    std::cout << std::endl << _denom << std::endl<<std::endl;
+    std::cout << std::endl;
+    std::cout << std::setw(count) << _denom << std::endl <<std::endl;
 }
