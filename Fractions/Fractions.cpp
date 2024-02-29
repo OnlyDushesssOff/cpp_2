@@ -10,11 +10,16 @@ Fractions::Fractions(){
 
 Fractions::Fractions(double fract){
     _fract = fract;
+    Add();
+    NOD();
+    Print();
 }
 
 Fractions::Fractions(int32_t num, int32_t denom){
     _num = num;
-    _denom = _denom;
+    _denom = denom;
+    NOD();
+    Print();
 }
 
 void Fractions::Add(){
@@ -73,14 +78,4 @@ void Fractions::Print(){
     } 
     std::cout << std::endl;
     std::cout << std::setw(count) << _denom << std::endl <<std::endl;
-}
-
-void Fractions::Mod1(){        
-    NOD();
-    Print();   
-}
-void Fractions::Mod2(){
-    Add();
-    NOD();
-    Print();
 }

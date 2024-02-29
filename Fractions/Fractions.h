@@ -18,8 +18,6 @@ public:
     int32_t GetDenom();
     double GetFract();
 
-    void Mod1();
-    void Mod2();
     void Print();
 
 };
