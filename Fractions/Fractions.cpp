@@ -2,17 +2,6 @@
 #include "cmath"
 #include <iomanip>
 
-void Fractions::SetDenom(int32_t newDenom){
-    _denom = newDenom;
-}
-
-void Fractions::SetNum(int32_t newNum){
-    _num = newNum;
-}
-
-void Fractions::SetFract(double newFract){
-    _fract = newFract;
-}
 
 Fractions::Fractions(){
     _num = 0;
@@ -25,7 +14,7 @@ Fractions::Fractions(double fract){
 
 Fractions::Fractions(int32_t num, int32_t denom){
     _num = num;
-    SetDenom(denom);
+    _denom = _denom;
 }
 
 void Fractions::Add(){
@@ -84,4 +73,14 @@ void Fractions::Print(){
     } 
     std::cout << std::endl;
     std::cout << std::setw(count) << _denom << std::endl <<std::endl;
+}
+
+void Fractions::Mod1(){        
+    NOD();
+    Print();   
+}
+void Fractions::Mod2(){
+    Add();
+    NOD();
+    Print();
 }

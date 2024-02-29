@@ -1,0 +1,6 @@
+# ninja log v5
+5	502	7309045119019373	CMakeFiles/main.dir/Fractions_main.cpp.obj	a925accc20b609a4
+31	682	7309045120819483	CMakeFiles/main.dir/Fractions.cpp.obj	7923f2abda03ab9
+682	962	7309045123495973	main.exe	2ac2814a0b3c8492
+6	507	7309045548547341	CMakeFiles/main.dir/Fractions_main.cpp.obj	a925accc20b609a4
+508	781	7309045551172239	main.exe	2ac2814a0b3c8492
