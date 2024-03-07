@@ -12,10 +12,12 @@ public:
 
     friend std::ostream& operator<< (std::ostream& os, const Complex& tmp){
         os << tmp._re;
-        if(tmp._im > 0)
+        if(tmp._im > 0){
             os << " + " << tmp._im<< "i" <<std::endl;
-        else;
+        }
+        else{
             os << " - " << tmp._im<< "i" <<std::endl;
+        }
         return os;
     }   
 };
