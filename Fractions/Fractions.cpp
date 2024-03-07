@@ -12,14 +12,12 @@ Fractions::Fractions(double fract){
     _fract = fract;
     Add();
     NOD();
-    Print();  
 }
 
 Fractions::Fractions(int32_t num, int32_t denom){
     _num = num;
     _denom = denom;
     NOD();
-    Print();
 }
 
 void Fractions::Add(){
