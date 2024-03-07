@@ -20,6 +20,7 @@ int main(){
         std::cin >> denom;
         if(denom != 0){
             Fractions fract = Fractions(num, denom);
+            fract.Print();
         }else{
             std::cout << "Divide by zero!";
             return 1;
@@ -29,6 +30,7 @@ int main(){
         double number;
         std::cin >> number;
         Fractions fract = Fractions(number);
+        fract.Print();
     }else{
         std::cout << "Error: Input Error";
         return 1;
