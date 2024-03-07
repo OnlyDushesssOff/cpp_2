@@ -2,10 +2,10 @@
 #include <iostream>
 #include "Complex.h"
 
-//Fractions operator+(double left, const Fractions& right){
-//    Fractions fract = right + Fractions(left);
-//    return fract;
-//}
+Fractions operator+(double left, const Fractions& right){
+    Fractions fract = right + Fractions(left);
+    return fract;
+}
 
 int main(){
 
