@@ -1,5 +1,11 @@
 #include "Fractions.h"
 #include <iostream>
+#include "Complex.h"
+
+//Fractions operator+(double left, const Fractions& right){
+//    Fractions fract = right + Fractions(left);
+//    return fract;
+//}
 
 int main(){
 
@@ -10,7 +16,8 @@ int main(){
         std::cout << "Print: ";
         int num;
         int denom;
-        std::cin >> num >> denom;
+        std::cin >> num;
+        std::cin >> denom;
         if(denom != 0){
             Fractions fract = Fractions(num, denom);
         }else{
@@ -26,4 +33,9 @@ int main(){
         std::cout << "Error: Input Error";
         return 1;
     }
+    
+    Fractions fract1 = Fractions(1, 2);
+    Fractions fract2 = Fractions(6, 7);
+    Complex comp = Complex(fract1, fract2);
+    std::cout << comp << std::endl;
 }
