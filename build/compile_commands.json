@@ -10,5 +10,11 @@
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  -std=c++17 -g -o CMakeFiles\\main.dir\\Fractions.cpp.obj -c \"C:\\Users\\andre\\Programs\\Visual Studio code\\C++\\cpp_2\\Fractions\\Fractions.cpp\"",
   "file": "C:\\Users\\andre\\Programs\\Visual Studio code\\C++\\cpp_2\\Fractions\\Fractions.cpp",
   "output": "CMakeFiles\\main.dir\\Fractions.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/Programs/Visual Studio code/C++/cpp_2/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  -std=c++17 -g -o CMakeFiles\\main.dir\\Complex.cpp.obj -c \"C:\\Users\\andre\\Programs\\Visual Studio code\\C++\\cpp_2\\Fractions\\Complex.cpp\"",
+  "file": "C:\\Users\\andre\\Programs\\Visual Studio code\\C++\\cpp_2\\Fractions\\Complex.cpp",
+  "output": "CMakeFiles\\main.dir\\Complex.cpp.obj"
 }
 ]

@@ -9,4 +9,7 @@ Complex::Complex(Fractions re, Fractions im){
     _im = Fractions(im);
 }
 
-Complex::Complex(int32_t num_re, uint32_t denom_re, int32_t num, uint32_t denom){}
+Complex::Complex(int32_t num_re, uint32_t denom_re, int32_t num, uint32_t denom){
+    Fractions _re = Fractions(num_re, denom_re);
+    Fractions _im = Fractions(num, denom);
+}

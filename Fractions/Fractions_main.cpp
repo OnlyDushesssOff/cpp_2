@@ -1,6 +1,8 @@
+#pragma once
 #include "Fractions.h"
 #include <iostream>
 #include "Complex.h"
+#include "Mode.h"
 
 Fractions operator+(double left, const Fractions& right){
     Fractions fract = right + Fractions(left);
@@ -9,35 +11,20 @@ Fractions operator+(double left, const Fractions& right){
 
 int main(){
 
-    int mod;
-    std::cout << "what do you want to enter: 1 - if a fraction by parts, 2 - if a decimal fraction" << std::endl;
+    system("cls");
+    char mod;
+    std::cout << "what do you want to enter:" << std::endl<< "1 - if a fraction by parts"<< std::endl<< "2 - if a decimal fraction" << std::endl<< "0 - Free mode" << std::endl<<std::endl;
     std::cin >> mod;
     if(mod == 1){
-        std::cout << "Print: ";
-        int num;
-        int denom;
-        std::cin >> num;
-        std::cin >> denom;
-        if(denom != 0){
-            Fractions fract = Fractions(num, denom);
-            fract.Print();
-        }else{
-            std::cout << "Divide by zero!";
-            return 1;
-        }
+        Fractions_Parts();
     }else if(mod == 2){
-        std::cout << "Print: ";
-        double number;
-        std::cin >> number;
-        Fractions fract = Fractions(number);
-        fract.Print();
-    }else{
-        std::cout << "Error: Input Error";
-        return 1;
+        Fractions_Desimal();
+    }else if(mod != 0){
+        Input_Error();
+    }else if(mod == 0){
+        Fractions fract1 = Fractions(1, 2);
+        Fractions fract2 = Fractions(6, 7);
+        Complex comp = Complex(fract1, fract2);
+        std::cout << comp << std::endl;
     }
-    
-    Fractions fract1 = Fractions(1, 2);
-    Fractions fract2 = Fractions(6, 7);
-    Complex comp = Complex(fract1, fract2);
-    std::cout << comp << std::endl;
 }

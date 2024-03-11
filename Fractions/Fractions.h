@@ -22,7 +22,7 @@ public:
     void Print();
 
     friend std::ostream& operator<< (std::ostream& os, const Fractions& tmp){
-        os << tmp._num << " / " << tmp._denom << std::endl;
+        os << tmp._num << "/" << tmp._denom;
         return os;
     }   
     Fractions operator=(const Fractions& fractions){
@@ -64,9 +64,61 @@ public:
         int32_t new_num2 = fractions._num * _denom;
         return new_num1 > new_num2;
     }
+
     bool operator< (const Fractions& fractions) const {
         int32_t new_num1 = _num * fractions._denom;
         int32_t new_num2 = fractions._num * _denom;
         return new_num1 < new_num2;
+    }
+
+    bool operator>= (const Fractions& fractions) const {
+        int32_t new_num1 = _num * fractions._denom;
+        int32_t new_num2 = fractions._num * _denom;
+        return new_num1 >= new_num2;
+    }
+    
+    bool operator<= (const Fractions& fractions) const {
+        int32_t new_num1 = _num * fractions._denom;
+        int32_t new_num2 = fractions._num * _denom;
+        return new_num1 <= new_num2;
+    }
+
+    bool operator!= (const Fractions& fractions) const {
+        int32_t new_num1 = _num * fractions._denom;
+        int32_t new_num2 = fractions._num * _denom;
+        return new_num1 != new_num2;
+    }
+
+    bool operator== (const Fractions& fractions) const {
+        int32_t new_num1 = _num * fractions._denom;
+        int32_t new_num2 = fractions._num * _denom;
+        return new_num1 == new_num2;
+    }
+
+    Fractions operator~ () {
+        _num *= -1;
+        return *this;
+    }
+
+    Fractions operator++ (){
+        _num += _denom;
+        return *this;
+    }
+
+    Fractions operator++ (int number) {
+        Fractions copy = Fractions(_num, _denom);
+        _num += _denom;
+        return copy;
+    }
+
+    Fractions operator-- (){
+        _num -= _denom;
+        return *this;
+    }
+
+    Fractions operator-- (int number) {
+        Fractions copy = Fractions(_num, _denom);
+        _num -= _denom;
+        return copy;
     }
 };
