@@ -1,3 +1,4 @@
+#pragma once
 #include "Fractions.h"
 #include "cmath"
 #include <iomanip>
@@ -9,31 +10,47 @@ Fractions::Fractions(){
 }
 
 Fractions::Fractions(double fract){
-    _fract = fract;
-    Add();
+    Add(fract);
     NOD();
 }
 
-Fractions::Fractions(int32_t num, int32_t denom){
+Fractions::Fractions(int32_t num){
     _num = num;
-    _denom = denom;
+    _denom = 1;
+}
+Fractions::Fractions(int32_t num, int32_t denom){
+    if(denom > 0){
+        _num = num;
+        if(denom != 0){
+            _denom = denom;
+        }else{
+            std::cout << "Divide by zero!";
+        }
+    }else{
+        _num = ~num;
+        if(denom != 0){
+            _denom = ~denom;
+        }else{
+            std::cout << "Divide by zero!";
+        }
+    }
     NOD();
 }
 
-void Fractions::Add(){
+void Fractions::Add(double fract){
     double ez = 0.0000000001;
     int flag = 1;
     int umn = 1;
     while(flag != 0){
-        uint32_t num = static_cast<int>(fabs(_fract * umn));
-        double ans = fabs(_fract * umn) - num;
+        uint32_t num = static_cast<int>(fabs(fract * umn));
+        double ans = fabs(fract * umn) - num;
         if(ans > ez){
             umn *= 10;
         }else{
             flag = 0;
         }
     }
-    _num = _fract * umn;
+    _num = fract * umn;
     _denom = umn;
 }
 
@@ -64,10 +81,6 @@ void Fractions::Print(){
             numi = numi / 10;
             count +=1;
         }        
-    }
-    if(_denom < 0){
-        _num *= -1;
-        _denom *= -1;
     }
     if(_num < 0){count += 1;}
     std::cout <<std::endl<<"Answer:"<<std::endl<< std::endl<<std::setw(count)<< _num <<std::endl;

@@ -1,11 +1,5 @@
 # ninja log v5
-11	238	7318752532270807	CMakeFiles/main.dir/Fractions_main.cpp.obj	a925accc20b609a4
-14	352	7318739753184941	CMakeFiles/main.dir/Fractions.cpp.obj	7923f2abda03ab9
-238	309	7318752532958957	main.exe	c6a71008dfb89b82
-11	237	7318741082561482	CMakeFiles/main.dir/Complex.cpp.obj	96c12bfcbd3f5193
-38	389	7318903573512957	CMakeFiles/main.dir/Complex.cpp.obj	96c12bfcbd3f5193
-18	391	7318903573533875	CMakeFiles/main.dir/Fractions_main.cpp.obj	a925accc20b609a4
-35	407	7318903573690187	CMakeFiles/main.dir/Fractions.cpp.obj	7923f2abda03ab9
-407	583	7318903575422326	main.exe	c6a71008dfb89b82
-11	245	7318904135306356	CMakeFiles/main.dir/Fractions_main.cpp.obj	a925accc20b609a4
-245	323	7318904136056744	main.exe	c6a71008dfb89b82
+11	296	7319750063721792	CMakeFiles/main.dir/Fractions_main.cpp.obj	a925accc20b609a4
+14	357	7319750064326300	CMakeFiles/main.dir/Fractions.cpp.obj	7923f2abda03ab9
+357	437	7319750065102707	main.exe	c6a71008dfb89b82
+16	265	7319750063402409	CMakeFiles/main.dir/Complex.cpp.obj	96c12bfcbd3f5193
